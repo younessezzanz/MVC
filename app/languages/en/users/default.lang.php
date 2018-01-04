@@ -1,0 +1,22 @@
+<?php
+$_Lang['title']                         = 'Users and Privileges | E-store';
+$_Lang['title_header']                  = 'Users';
+$_Lang['title_header_table']            = 'Lists of Users';
+$_Lang['title_new_item']                = 'Add New User';
+$_Lang['title_user_id']                 = 'User Id';
+$_Lang['title_user_username']           = 'Username';
+$_Lang['title_user_email']              = 'Email';
+$_Lang['title_user_PhoneNumber']        = 'Phone Number';
+$_Lang['title_user_SubscriptionDate']   = 'Subscription Date';
+$_Lang['title_user_LastLogin']          = 'Last Login';
+$_Lang['title_user_GroupId']            = 'Group Id';
+$_Lang['title_user_Status']             = 'Status';
+$_Lang['title_table_copy']              = 'Copy';
+$_Lang['title_table_csv']               = 'CSV';
+$_Lang['title_table_excel']             = 'Excel';
+$_Lang['title_table_pdf']               = 'PDF';
+$_Lang['title_table_print']             = 'Print';
+$_Lang['title_table_action_edit']       = 'Edit';
+$_Lang['title_table_action_delete']     = 'Delete';
+$_Lang['title_breadcrumb_home']         = 'Home';
+$_Lang['title_breadcrumb_users']        = 'Users';
