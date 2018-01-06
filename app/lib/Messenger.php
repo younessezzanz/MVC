@@ -1,5 +1,5 @@
 <?php
-namespace PHPMVC\lib;
+namespace PHPMVC\LIB;
 
 class Messenger
 {

@@ -139,6 +139,7 @@ trait Validate
                         if($this->min($value, $m[2][0]) === false) {
                             $this->messenger->add(
                                 $this->language->feedKey('text_error_'.$m[1][0], [$this->language->get('text_label_'.$fieldName), $m[2][0]]),
+                                strtoupper(Messenger::APP_MESSAGE_ERROR),
                                 Messenger::APP_MESSAGE_ERROR
                             );
                             $errors[$fieldName] = true;
@@ -147,6 +148,7 @@ trait Validate
                         if($this->max($value, $m[2][0]) === false) {
                             $this->messenger->add(
                                 $this->language->feedKey('text_error_'.$m[1][0], [$this->language->get('text_label_'.$fieldName), $m[2][0]]),
+                                strtoupper(Messenger::APP_MESSAGE_ERROR),
                                 Messenger::APP_MESSAGE_ERROR
                             );
                             $errors[$fieldName] = true;
@@ -155,6 +157,7 @@ trait Validate
                         if($this->lt($value, $m[2][0]) === false) {
                             $this->messenger->add(
                                 $this->language->feedKey('text_error_'.$m[1][0], [$this->language->get('text_label_'.$fieldName), $m[2][0]]),
+                                strtoupper(Messenger::APP_MESSAGE_ERROR),
                                 Messenger::APP_MESSAGE_ERROR
                             );
                             $errors[$fieldName] = true;
@@ -163,6 +166,7 @@ trait Validate
                         if($this->gt($value, $m[2][0]) === false) {
                             $this->messenger->add(
                                 $this->language->feedKey('text_error_'.$m[1][0], [$this->language->get('text_label_'.$fieldName), $m[2][0]]),
+                                strtoupper(Messenger::APP_MESSAGE_ERROR),
                                 Messenger::APP_MESSAGE_ERROR
                             );
                             $errors[$fieldName] = true;
@@ -171,6 +175,7 @@ trait Validate
                         if($this->between($value, $m[2][0], $m[3][0]) === false) {
                             $this->messenger->add(
                                 $this->language->feedKey('text_error_'.$m[1][0], [$this->language->get('text_label_'.$fieldName), $m[2][0], $m[3][0]]),
+                                strtoupper(Messenger::APP_MESSAGE_ERROR),
                                 Messenger::APP_MESSAGE_ERROR
                             );
                             $errors[$fieldName] = true;
@@ -179,6 +184,7 @@ trait Validate
                         if($this->floatlike($value, $m[2][0], $m[3][0]) === false) {
                             $this->messenger->add(
                                 $this->language->feedKey('text_error_'.$m[1][0], [$this->language->get('text_label_'.$fieldName), $m[2][0], $m[3][0]]),
+                                strtoupper(Messenger::APP_MESSAGE_ERROR),
                                 Messenger::APP_MESSAGE_ERROR
                             );
                             $errors[$fieldName] = true;
@@ -187,6 +193,7 @@ trait Validate
                         if($this->eq($value, $m[2][0]) === false) {
                             $this->messenger->add(
                                 $this->language->feedKey('text_error_'.$m[1][0], [$this->language->get('text_label_'.$fieldName), $m[2][0]]),
+                                strtoupper(Messenger::APP_MESSAGE_ERROR),
                                 Messenger::APP_MESSAGE_ERROR
                             );
                             $errors[$fieldName] = true;
@@ -196,6 +203,7 @@ trait Validate
                         if($this->eq_field($value, $otherFieldValue) === false) {
                             $this->messenger->add(
                                 $this->language->feedKey('text_error_'.$m[1][0], [$this->language->get('text_label_'.$fieldName), $this->language->get('text_label_'.$m[2][0])]),
+                                strtoupper(Messenger::APP_MESSAGE_ERROR),
                                 Messenger::APP_MESSAGE_ERROR
                             );
                             $errors[$fieldName] = true;
@@ -204,6 +212,7 @@ trait Validate
                         if($this->$validationRole($value) === false) {
                             $this->messenger->add(
                                 $this->language->feedKey('text_error_'.$validationRole, [$this->language->get('text_label_'.$fieldName)]),
+                                strtoupper(Messenger::APP_MESSAGE_ERROR),
                                 Messenger::APP_MESSAGE_ERROR
                             );
                             $errors[$fieldName] = true;
@@ -212,6 +221,7 @@ trait Validate
                 }
             }
         }
+        
         return empty($errors) ? true : false;
     }
 

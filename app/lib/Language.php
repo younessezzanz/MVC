@@ -37,7 +37,7 @@ class Language
         }
     }
 
-    public function feedKey ($key, $data)
+    public function feedKey($key, $data)
     {
         if(array_key_exists($key, $this->dictionary)) {
             array_unshift($data, $this->dictionary[$key]);
