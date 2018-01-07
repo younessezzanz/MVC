@@ -37,7 +37,7 @@ class UsersController extends AbstractController
     {
         $this->language->load('users|default');
         $this->language->load('template|common');
-
+    
         $this->_data['users'] = UserModel::getAll();
         $this->_view();
     }
@@ -92,6 +92,52 @@ class UsersController extends AbstractController
         }
 
         $this->_view();
+    }
+
+    public function editAction()
+    {
+
+        $this->language->load('users|default');
+        $this->language->load('users|labels');
+        $this->language->load('template|common');
+        $this->language->load('users|messages');
+        $this->language->load('validation|errors');
+
+        $id = $this->filterInt($this->_params[0]);
+        $user = UserModel::getByPK($id);
+        if($user === false) {
+            $this->redirect('/users');
+        }
+        $this->_data['user'] = $user;
+        $this->_data['groups'] = UserGroupModel::getAll();
+
+        if(isset($_POST['submit']) && $this->isValid($this->_editActionRoles, $_POST)) {
+            $user->PhoneNumber = $this->filterString($_POST['PhoneNumber']);
+            $user->GroupId = $this->filterInt($_POST['GroupId']);
+            if($user->save()) {
+                $this->messenger->add($this->language->get('message_create_success'));
+            } else {
+                $this->messenger->add($this->language->get('message_create_failed'), Messenger::APP_MESSAGE_ERROR);
+            }
+            $this->redirect('/users');
+        }
+        $this->_view();
+    }
+
+    public function deleteAction()
+    {
+        $id = $this->filterInt($this->_params[0]);
+        $user = UserModel::getByPK($id);
+        if($user === false || $this->session->u->UserId == $id) {
+            $this->redirect('/users');
+        }
+        $this->language->load('users|messages');
+        if($user->delete()) {
+            $this->messenger->add($this->language->get('message_delete_success'));
+        } else {
+            $this->messenger->add($this->language->get('message_delete_failed'), Messenger::APP_MESSAGE_ERROR);
+        }
+        $this->redirect('/users');
     }
 
 

@@ -7,6 +7,7 @@ use PHPMVC\LIB\FrontController;
 use PHPMVC\LIB\Language;
 use PHPMVC\LIB\SessionManager;
 use PHPMVC\LIB\Template\Template;
+use PHPMVC\LIB\Authentication;
 
 if(!defined('DS')){
     define('DS', DIRECTORY_SEPARATOR);
@@ -31,10 +32,12 @@ $language = new Language();
 
 $messenger = Messenger::getInstance($session);
 
+$authentication = Authentication::getInstance($session);
+
 $registry = Registry::getInstance();
 $registry->session   = $session;
 $registry->language  = $language;
 $registry->messenger = $messenger;
 
-$frontcontroller = new FrontController($template, $registry);
+$frontcontroller = new FrontController($template, $registry, $authentication);
 $frontcontroller->dispatch();

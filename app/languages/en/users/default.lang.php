@@ -20,3 +20,4 @@ $_Lang['title_table_action_edit']       = 'Edit';
 $_Lang['title_table_action_delete']     = 'Delete';
 $_Lang['title_breadcrumb_home']         = 'Home';
 $_Lang['title_breadcrumb_users']        = 'Users';
+$_Lang['text_table_control_delete_confirm'] = 'Would you like to delete the user?';

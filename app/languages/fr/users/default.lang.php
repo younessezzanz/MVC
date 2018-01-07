@@ -20,3 +20,4 @@ $_Lang['title_table_action_edit']       = 'Modifier';
 $_Lang['title_table_action_delete']     = 'Supprimer';
 $_Lang['title_breadcrumb_home']         = 'Accueil';
 $_Lang['title_breadcrumb_users']        = 'Utilisateurs';
+$_Lang['text_table_control_delete_confirm'] = 'Voulez-vous supprimer l\'utilisateur?';

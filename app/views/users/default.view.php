@@ -52,7 +52,7 @@
 
                       <div class="btn-group">
                           <a href="/users/edit/<?= $user->UserId; ?>" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
-                          <a href="/users/delete/<?= $user->UserId; ?>" class="btn btn-xs btn-danger" onClick="if(!confirm('<?= $title_table_action_delete ?>')) return false;"><i class="fa fa-trash"></i></a>
+                          <a href="/users/delete/<?= $user->UserId; ?>" class="btn btn-xs btn-danger" onClick="if(!confirm('<?= $text_table_control_delete_confirm ?>')) return false;"><i class="fa fa-trash"></i></a>
                       </div>
 
                      </td>
