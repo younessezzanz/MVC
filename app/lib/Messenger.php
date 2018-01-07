@@ -29,7 +29,7 @@ class Messenger
         return self::$_instance;
     }
 
-    public function add($message, $title, $type = self::APP_MESSAGE_SUCCESS)
+    public function add($message, $title=  self::APP_MESSAGE_SUCCESS, $type = self::APP_MESSAGE_SUCCESS)
     {
         if(!$this->messagesExists()) {
             $this->_session->messages = [];

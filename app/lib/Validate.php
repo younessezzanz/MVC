@@ -133,6 +133,7 @@ trait Validate
                 $value = $inputType[$fieldName];
                 $validationRoles = explode('|', $validationRoles);
                 foreach ($validationRoles as $validationRole) {
+                    
                     if(array_key_exists($fieldName, $errors))
                         continue;
                     if(preg_match_all('/(min)\((\d+)\)/', $validationRole, $m)) {
@@ -218,6 +219,7 @@ trait Validate
                             $errors[$fieldName] = true;
                         }
                     }
+
                 }
             }
         }

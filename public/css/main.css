@@ -131,3 +131,11 @@ header.panel-heading strong {
     width: 31%;
     margin-left: 0;
 }
+
+.errors {
+    border-color: #ff5f5f;
+}
+
+.success {
+    border-color: #3c8a0c;
+}

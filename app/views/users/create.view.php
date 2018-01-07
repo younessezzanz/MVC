@@ -20,7 +20,14 @@
                         <div class="form-group">
                         <label class="col-sm-3 control-label"><?= $text_label_FirstName ?></label>
                         <div class="col-sm-9">
-                            <input type="text" data-rangewords="[0,10]" class="form-control" name="FirstName" maxlength="10" data-required="true" placeholder="<?= $text_label_FirstName ?>">    
+                            <input type="text" 
+                                   data-rangewords="[0,10]" 
+                                   class="form-control" 
+                                   name="FirstName" 
+                                   maxlength="10" 
+                                   data-required="true" 
+                                   value="<?=    $this->showValue('FirstName') ?>"
+                                   placeholder="<?= $text_label_FirstName ?>">    
                         </div>
                     </div>
 
@@ -29,7 +36,14 @@
                         <div class="form-group">
                         <label class="col-sm-3 control-label"><?= $text_label_LastName ?></label>
                         <div class="col-sm-9">
-                            <input type="text" data-rangewords="[0,10]" class="form-control" name="LastName" maxlength="10" data-required="true" placeholder="<?= $text_label_LastName ?>">    
+                            <input type="text" 
+                                   data-rangewords="[0,10]" 
+                                   class="form-control" 
+                                   name="LastName" 
+                                   maxlength="10" 
+                                   data-required="true" 
+                                   value="<?=    $this->showValue('LastName') ?>"
+                                   placeholder="<?= $text_label_LastName ?>">    
                         </div>
                     </div>
 
@@ -40,7 +54,14 @@
                         <div class="form-group">
                         <label class="col-sm-3 control-label"><?= $text_label_Username ?></label>
                         <div class="col-sm-9">
-                            <input type="text" data-rangewords="[0,30]" class="form-control" name="Username" maxlength="30" data-required="true" placeholder="<?= $text_label_Username ?>">    
+                            <input type="text" 
+                                   data-rangewords="[0,30]" 
+                                   class="form-control" 
+                                   name="Username" 
+                                   maxlength="30" 
+                                   data-required="true" 
+                                   value="<?=    $this->showValue('Username') ?>"
+                                   placeholder="<?= $text_label_Username ?>">    
                         </div>
                     </div>
 
@@ -49,7 +70,13 @@
                      <div class="form-group">
                         <label class="col-sm-3 control-label"><?= $text_label_Password ?></label>
                         <div class="col-sm-9">
-                           <input type="password" class="form-control" name="Password" data-required="true" id="pwd" placeholder="<?= $text_label_Password ?>">    
+                           <input type="password" 
+                                  class="form-control" 
+                                  name="Password" 
+                                  data-required="true" 
+                                  id="pwd" 
+                                  value="<?= $this->showValue('Password') ?>"
+                                  placeholder="<?= $text_label_Password ?>">    
                         </div>
                      </div>
 
@@ -58,7 +85,13 @@
                      <div class="form-group">
                         <label class="col-sm-3 control-label"><?= $text_label_CPassword ?></label>
                         <div class="col-sm-9">
-                           <input type="password" class="form-control" name="CPassword" data-equalto="#pwd" data-required="true" placeholder="<?= $text_label_CPassword ?>">    
+                           <input type="password" 
+                                  class="form-control" 
+                                  name="CPassword" 
+                                  data-equalto="#pwd" 
+                                  data-required="true" 
+                                  value="<?= $this->showValue('CPassword') ?>"
+                                  placeholder="<?= $text_label_CPassword ?>">    
                         </div>
                      </div>
 
@@ -68,7 +101,16 @@
                      <div class="form-group">
                         <label class="col-sm-3 control-label"><?= $text_label_Email ?></label>
                         <div class="col-sm-9">
-                           <input type="email" data-rangewords="[0,40]" class="form-control" name="Email" maxlength="40" data-type="email" data-required="true" id="email" placeholder="<?= $text_label_Email ?>">    
+                           <input type="email" 
+                                  data-rangewords="[0,40]" 
+                                  class="form-control" 
+                                  name="Email" 
+                                  maxlength="40" 
+                                  data-type="email" 
+                                  data-required="true" 
+                                  id="email" 
+                                  value="<?= $this->showValue('Email') ?>"
+                                  placeholder="<?= $text_label_Email ?>">    
                         </div>
                      </div>
 
@@ -77,7 +119,16 @@
                      <div class="form-group">
                         <label class="col-sm-3 control-label"><?= $text_label_CEmail ?></label>
                         <div class="col-sm-9">
-                           <input type="email" data-rangewords="[0,40]" class="form-control" name="CEmail" maxlength="40" data-type="email"  data-equalto="#email" data-required="true" placeholder="<?= $text_label_CEmail ?>">    
+                           <input type="email" 
+                                  data-rangewords="[0,40]" 
+                                  class="form-control" 
+                                  name="CEmail" 
+                                  maxlength="40" 
+                                  data-type="email"  
+                                  data-equalto="#email" 
+                                  data-required="true" 
+                                  value="<?= $this->showValue('CEmail') ?>"
+                                  placeholder="<?= $text_label_CEmail ?>">    
                         </div>
                      </div>
 
@@ -87,7 +138,15 @@
                      <div class="form-group">
                         <label class="col-sm-3 control-label"><?= $text_label_PhoneNumber ?></label>
                         <div class="col-sm-9">
-                           <input type="text" data-rangewords="[0,30]" class="form-control" name="PhoneNumber" maxlength="30" data-required="true" data-type="phone" placeholder="(XXX) XXXX XXX">    
+                           <input type="text" 
+                                  data-rangewords="[0,30]" 
+                                  class="form-control" 
+                                  name="PhoneNumber" 
+                                  maxlength="30" 
+                                  data-required="true" 
+                                  data-type="phone" 
+                                  value="<?= $this->showValue('PhoneNumber') ?>"
+                                  placeholder="(XXX) XXXX XXX">    
                         </div>
                      </div>
 
@@ -102,7 +161,7 @@
                                 if (false !== $groups): 
                                     foreach ($groups as $group): 
                             ?>
-                                <option value="<?= $group->GroupId ?>"><?= $group->GroupName ?></option>
+                                <option <?php echo ($this->showValue('GroupId') == $group->GroupId) ?  "selected" :  ""; ?> value="<?= $group->GroupId ?>"><?= $group->GroupName ?></option>
                             <?php 
                                     endforeach;
                                 endif; 

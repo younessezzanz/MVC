@@ -30,6 +30,7 @@
                      <th width="10%"><?= $title_user_LastLogin ?></th>
                      <th width="10%"><?= $title_user_GroupId ?></th>
                      <th width="10%"><?= $title_user_Status ?></th>
+                     <th width="20%"><?= $title_table_action ?></th>
                   </tr>
                </thead>
                <tbody>
@@ -46,12 +47,16 @@
                      <td class=""><?= $user->LastLogin; ?></td>
                      <td class=""><?= $user->GroupId; ?></td>
                      <td class=""><?= $user->Status; ?></td>
+
                      <td>
-                        <a href="/users/edit/<?= $user->UserId; ?>"><?= $title_table_action_edit ?></a>
+
+                      <div class="btn-group">
+                          <a href="/users/edit/<?= $user->UserId; ?>" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                          <a href="/users/delete/<?= $user->UserId; ?>" class="btn btn-xs btn-danger" onClick="if(!confirm('<?= $title_table_action_delete ?>')) return false;"><i class="fa fa-trash"></i></a>
+                      </div>
+
                      </td>
-                     <td>
-                        <a href="/users/delete/<?= $user->UserId; ?>" onClick="if(!confirm('Are you sure your want to delete this user?')) return false;"><?= $title_table_action_delete ?></a>
-                     </td>
+
                   </tr>
                 <?php  
                   endforeach;
